@@ -40,9 +40,9 @@
 // | G       | X       | J        | K        |   | R         | M         | F       | P       |
 //                     | RET      | NAV(SPC) |   | SYM(BSPC) | CONF(ESC) |
                         bindings = <
-   &kp B      &kp Y      &kp O       &kp U       &none &none &kp L         &kp D       &kp W       &kp V
-   &mt LGUI C &mt LALT I &mt LSHFT E &mt LCTRL A &none &none &mt RCTRL H   &mt RSHFT T &mt RALT S  &mt RGUI N
-   &kp G      &kp X      &kp J       &kp K       &none &none &kp R         &kp M       &kp F       &kp P
+   &kp Q      &kp W      &kp E       &kp R       &kp T &kp Y &kp U         &kp I       &kp O       &kp U
+   &kp A      &kp S      &kp D       &kp F       &kp G &kp H &kp J         &kp K       &kp L       &mt RGUI N
+   &kp Z      &kp X      &kp C       &kp V       &kp B &kp N &kp M         &kp M       &kp F       &kp P
                         &kp RET  &lt NAVFN SPACE  &lt SYMNUM BSPC &lt CONFIG ESC
                         >;
                 };
