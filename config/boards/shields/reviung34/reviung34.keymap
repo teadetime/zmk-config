@@ -45,6 +45,7 @@
    &kp Z      &kp X      &kp C       &kp V  &kp B       &kp N &kp M         &kp M       &kp F       &kp P
                         &kp RET  &lt NAVFN SPACE  &lt SYMNUM BSPC &lt CONFIG ESC
                         >;
+                        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 
                 symnum_layer {
