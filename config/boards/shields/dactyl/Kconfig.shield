@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 
 config SHIELD_Dactyl_LEFT
-	def_bool $(shields_list_contains, dactyl_left)
+	def_bool $(shields_list_contains,dactyl_left)
 
 config SHIELD_Dactyl_RIGHT
-	def_bool $(shields_list_contains, dactyl_right)
+	def_bool $(shields_list_contains,dactyl_right)

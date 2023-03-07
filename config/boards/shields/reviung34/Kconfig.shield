@@ -1,2 +1,2 @@
 config SHIELD_REVIUNG34
-    def_bool $(shields_list_contains, reviung34)
+    def_bool $(shields_list_contains,reviung34)
