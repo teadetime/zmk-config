@@ -25,43 +25,6 @@
 };
 
 / {
-    macros {
-            ZMK_MACRO(alt_tab,
-              wait-ms = <30>;
-              tap-ms = <40>;
-              bindings =  <&macro_press &kp LALT>,
-                          <&macro_tap &kp TAB>,
-                          <&macro_release &kp LALT>;
-            )
-//            ZMK_MACRO(alt_shft_tab,
-//              wait-ms = <30>;
-//              tap-ms = <40>;
-//              bindings =  <&macro_press &kp LALT &kp LSHFT>,
-//                    <&macro_tap &kp TAB>, 
-//                    <&macro_release &kp LALT &kp LSHFT>;
-//            )
-//            ZMK_MACRO(ctrl_tab,
-//              wait-ms = <30>;
-//              tap-ms = <40>;
-//              bindings =  <&macro_press &kp LCTRL>,
-//                <&macro_tap &kp TAB>
-//                , <&macro_release &kp LCTRL >;
-//            )
-//            ZMK_MACRO(ctrl_shft_tab,
-//              wait-ms = <30>;
-//              tap-ms = <40>;
-//              bindings =  <&macro_press &kp LCTRL &kp LSHFT>,
-//                    <&macro_tap &kp TAB>, 
-//                    <&macro_release &kp LCTRL &kp LSHFT>;
-//            )
-        };
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <BRACK SYMNAV>;
-            then-layer = <CONFIG>;
-            };
-        };
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -73,6 +36,43 @@
             bindings = <&kp>, <&kp>;
         };
     };
+    macros {
+            ZMK_MACRO(alt_tab,
+              wait-ms = <30>;
+              tap-ms = <40>;
+              bindings =  <&macro_press &kp LALT>,
+                          <&macro_tap &kp TAB>,
+                          <&macro_release &kp LALT>;
+            )
+            ZMK_MACRO(alt_shft_tab,
+              wait-ms = <30>;
+              tap-ms = <40>;
+              bindings =  <&macro_press &kp LALT &kp LSHFT>,
+                    <&macro_tap &kp TAB>, 
+                    <&macro_release &kp LALT &kp LSHFT>;
+            )
+            ZMK_MACRO(ctrl_tab,
+              wait-ms = <30>;
+              tap-ms = <40>;
+              bindings =  <&macro_press &kp LCTRL>,
+                <&macro_tap &kp TAB>
+                , <&macro_release &kp LCTRL >;
+            )
+            ZMK_MACRO(ctrl_shft_tab,
+              wait-ms = <30>;
+              tap-ms = <40>;
+              bindings =  <&macro_press &kp LCTRL &kp LSHFT>,
+                    <&macro_tap &kp TAB>, 
+                    <&macro_release &kp LCTRL &kp LSHFT>;
+            )
+        };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <BRACK SYMNAV>;
+            then-layer = <CONFIG>;
+            };
+        };
 
     keymap {
         compatible = "zmk,keymap";
@@ -100,7 +100,7 @@ symnav_layer {
 // | ~ | ^ | + | < | = |      | ESC | '   | ,  | .  |     |
 //             |   |   |      |     |     |
 bindings = <
-   &kp HASH   &kp DLLR   &kp AMPS   &kp ASTRk  &kp QMARK     &kp GRAVE  &kp PRCNT  &kp AT    &trans  &trans
+   &kp HASH   &kp DLLR   &kp AMPS   &kp STAR   &kp QMARK     &kp GRAVE  &kp PRCNT  &kp AT    &trans  &trans
    &kp COLON  &kp UNDER  &kp MINUS  &kp GT     &kp EXCL      &kp TAB    &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT
    &kp TILDE  &kp CARET  &kp PLUS   &kp LT     &kp EQUAL     &kp ESC    &kp APOS   &trans    &trans  &trans 
                                     &trans     &trans        &trans     &trans
@@ -114,7 +114,7 @@ brackets_layer {
 //  | ~ | ^ | + | < | = |      | ~ | { | } | < | > |
 //              |   |   |      |   |   |
 bindings = <
-   &kp HASH   &kp DLLR   &kp AMPS   &kp ASTRk  &kp QMARK     &kp GRAVE  &kp LPAR  &kp RPAR  &kp UNDER  &kp PIPE
+   &kp HASH   &kp DLLR   &kp AMPS   &kp STAR  &kp QMARK     &kp GRAVE  &kp LPAR  &kp RPAR  &kp UNDER  &kp PIPE
    &kp COLON  &kp UNDER  &kp MINUS  &kp GT     &kp EXCL      &kp DQT    &kp LBKT  &kp RBKT  &kp FSLH   &kp BSLH
    &kp TILDE  &kp CARET  &kp PLUS   &kp LT     &kp EQUAL     &kp TILDE  &kp LBRC  &kp RBRC  &kp LT     &kp GT 
                                     &trans     &trans        &trans     &trans
@@ -144,8 +144,8 @@ config_layer {
 //                                              |     |     |     |     |     |
                         bindings = <
    &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &none &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
-   &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &none &none &bt BT_SEL 4 &none &none        &none
-   &none           &none           &none           &rgb_ug RGB_TOG &none &none &bt BT_CLR   &none &out OUT_TOG        &reset
+   &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &none &none &bt BT_SEL 4 &bootloader &none        &none
+   &none           &none           &none           &rgb_ug RGB_TOG &none &none &bt BT_CLR   &none &out OUT_TOG        &sys_reset
                                                              &trans      &trans               &trans      &trans
                         >;
                 };
