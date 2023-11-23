@@ -30,30 +30,30 @@
               wait-ms = <30>;
               tap-ms = <40>;
               bindings =  <&macro_press &kp LALT>,
-                <&macro_tap &kp TAB>
-                , <&macro_release &kp LALT>;
-            );
-            ZMK_MACRO(alt_shft_tab,
-              wait-ms = <30>;
-              tap-ms = <40>;
-              bindings =  <&macro_press &kp LALT &kp LSHFT>,
-                    <&macro_tap &kp TAB>, 
-                    <&macro_release &kp LALT &kp LSHFT>;
-            );
-            ZMK_MACRO(ctrl_tab,
-              wait-ms = <30>;
-              tap-ms = <40>;
-              bindings =  <&macro_press &kp LCTRL>,
-                <&macro_tap &kp TAB>
-                , <&macro_release &kp LCTRL >;
-            );
-            ZMK_MACRO(ctrl_shft_tab,
-              wait-ms = <30>;
-              tap-ms = <40>;
-              bindings =  <&macro_press &kp LCTRL &kp LSHFT>,
-                    <&macro_tap &kp TAB>, 
-                    <&macro_release &kp LCTRL &kp LSHFT>;
-            );
+                          <&macro_tap &kp TAB>,
+                          <&macro_release &kp LALT>;
+            )
+//            ZMK_MACRO(alt_shft_tab,
+//              wait-ms = <30>;
+//              tap-ms = <40>;
+//              bindings =  <&macro_press &kp LALT &kp LSHFT>,
+//                    <&macro_tap &kp TAB>, 
+//                    <&macro_release &kp LALT &kp LSHFT>;
+//            )
+//            ZMK_MACRO(ctrl_tab,
+//              wait-ms = <30>;
+//              tap-ms = <40>;
+//              bindings =  <&macro_press &kp LCTRL>,
+//                <&macro_tap &kp TAB>
+//                , <&macro_release &kp LCTRL >;
+//            )
+//            ZMK_MACRO(ctrl_shft_tab,
+//              wait-ms = <30>;
+//              tap-ms = <40>;
+//              bindings =  <&macro_press &kp LCTRL &kp LSHFT>,
+//                    <&macro_tap &kp TAB>, 
+//                    <&macro_release &kp LCTRL &kp LSHFT>;
+//            )
         };
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -100,9 +100,9 @@ symnav_layer {
 // | ~ | ^ | + | < | = |      | ESC | '   | ,  | .  |     |
 //             |   |   |      |     |     |
 bindings = <
-   &kp HASH   &kp DLLR   &kp AMPS   &kp ASTRk  &kp QMARK     &kp GRAVE  &kp PRCNT  &kp AT     &trans    &trans
-   &kp COLON  &kp UNDER  &kp MINUS  &kp GT     &kp EXCL      &kp TAB    &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT
-   &kp TILDE  &kp CARET  &kp PLUS   &kp LT     &kp EQUAL     &kp ESC    &kp APOS   &kp trans  &kp trans  &trans 
+   &kp HASH   &kp DLLR   &kp AMPS   &kp ASTRk  &kp QMARK     &kp GRAVE  &kp PRCNT  &kp AT    &trans  &trans
+   &kp COLON  &kp UNDER  &kp MINUS  &kp GT     &kp EXCL      &kp TAB    &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT
+   &kp TILDE  &kp CARET  &kp PLUS   &kp LT     &kp EQUAL     &kp ESC    &kp APOS   &trans    &trans  &trans 
                                     &trans     &trans        &trans     &trans
 >;
 };
