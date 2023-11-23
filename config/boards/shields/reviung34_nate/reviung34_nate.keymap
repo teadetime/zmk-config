@@ -32,28 +32,28 @@
               bindings =  <&macro_press &kp LALT>,
                 <&macro_tap &kp TAB>
                 , <&macro_release &kp LALT>;
-            ),
+            );
             ZMK_MACRO(alt_shft_tab,
               wait-ms = <30>;
               tap-ms = <40>;
               bindings =  <&macro_press &kp LALT &kp LSHFT>,
                     <&macro_tap &kp TAB>, 
                     <&macro_release &kp LALT &kp LSHFT>;
-            ),
+            );
             ZMK_MACRO(ctrl_tab,
               wait-ms = <30>;
               tap-ms = <40>;
               bindings =  <&macro_press &kp LCTRL>,
                 <&macro_tap &kp TAB>
                 , <&macro_release &kp LCTRL >;
-            ),
+            );
             ZMK_MACRO(ctrl_shft_tab,
               wait-ms = <30>;
               tap-ms = <40>;
               bindings =  <&macro_press &kp LCTRL &kp LSHFT>,
                     <&macro_tap &kp TAB>, 
                     <&macro_release &kp LCTRL &kp LSHFT>;
-            )
+            );
         };
     conditional_layers {
         compatible = "zmk,conditional-layers";

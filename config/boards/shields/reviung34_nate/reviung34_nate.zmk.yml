@@ -1,6 +1,6 @@
 file_format: "1"
-id: reviung34
-name: REVIUNG34
+id: reviung34_nate
+name: REVIUNG34_NATE
 type: shield
 url: https://github.com/gtips/reviung/tree/master/reviung34
 requires: [pro_micro]
