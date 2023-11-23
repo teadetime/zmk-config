@@ -109,15 +109,15 @@ bindings = <
 
 brackets_layer {
 // ------------------------------------
-// |   |   |   |   |   |      | ` | ( | ) | " | | |
-// |   |   |   |   |   |      | " | [ | ] | / | \ |
-// |   |   |   |   |   |      | ~ | { | } | < | > |
-//             |   |   |      |   |   |
+//  | # | $ | & | * | ? |      | ` | ( | ) | " | | |
+//  | : | _ | - | > | ! |      | " | [ | ] | / | \ |
+//  | ~ | ^ | + | < | = |      | ~ | { | } | < | > |
+//              |   |   |      |   |   |
 bindings = <
-   &kp EXCL &kp EQUAL &kp AMPS   &kp ASTR   &trans     &kp GRAVE  &kp LPAR  &kp RPAR  &kp UNDER  &kp PIPE
-   &trans   &kp UNDER &kp MINUS  &kp GT     &trans     &kp DOT    &kp LBKT  &kp RBKT  &kp FSLH   &kp BSLH
-   &trans   &kp CARET &kp PLUS   &kp LT     &trans     &kp TILDE  &kp LBRC  &kp RBRC  &kp LT     &kp GT 
-                                 &trans     &trans     &trans   &trans
+   &kp HASH   &kp DLLR   &kp AMPS   &kp ASTRk  &kp QMARK     &kp GRAVE  &kp LPAR  &kp RPAR  &kp UNDER  &kp PIPE
+   &kp COLON  &kp UNDER  &kp MINUS  &kp GT     &kp EXCL      &kp DQT    &kp LBKT  &kp RBKT  &kp FSLH   &kp BSLH
+   &kp TILDE  &kp CARET  &kp PLUS   &kp LT     &kp EQUAL     &kp TILDE  &kp LBRC  &kp RBRC  &kp LT     &kp GT 
+                                    &trans     &trans        &trans     &trans
 >;
 };
 
@@ -170,10 +170,10 @@ nav2_layer {
     // | | |                   |              | |      |  |  |  |  |  |
     //                         |              | |      |  |  |
     bindings = <
-    &trans &trans &ctrl_alt_shft_tab  &ctrl_alt_tab &trans     &trans  &trans  &trans  &trans  &trans 
-    &trans &trans &ctrl_shft_tab      &ctrl_tab     &trans     &trans  &trans  &trans  &trans  &trans
-    &trans &trans &trans              &trans        &trans     &trans  &trans  &trans  &trans  &trans 
-                                      &trans        &trans     &trans  &trans
+    &trans &trans &alt_shft_tab   &alt_tab   &trans     &trans  &trans  &trans  &trans  &trans 
+    &trans &trans &ctrl_shft_tab  &ctrl_tab  &trans     &trans  &trans  &trans  &trans  &trans
+    &trans &trans &trans          &trans     &trans     &trans  &trans  &trans  &trans  &trans 
+                                  &trans     &trans     &trans  &trans
     >;
 };
 
