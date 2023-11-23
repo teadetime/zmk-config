@@ -15,3 +15,7 @@
 include:
   - board: nice_nano_v2
     shield: chalice
+  - board: nice_nano_v2
+    shield: reviung34
+  - board: nice_nano_v2
+    shield: settings_reset
