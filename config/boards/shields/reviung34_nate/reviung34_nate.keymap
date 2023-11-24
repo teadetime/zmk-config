@@ -30,13 +30,17 @@
         combo_tab {
             timeout-ms = <50>;
             key-positions = <16 17>;
-            bindings = <&kp TAB>;
+            bindings = <&kp RS(TAB)>;
         };
         combo_shft_tab {
             timeout-ms = <50>;
-            key-positions = <15 16
-            >;
-            bindings = <&kp LSHFT(TAB)>;
+            key-positions = <15 16>;
+            bindings = <&kp LS(TAB)>;
+        };
+        combo_combo {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&shft_tab>;
         };
     };
     behaviors {
@@ -51,33 +55,12 @@
         };
     };
     macros {
-            ZMK_MACRO(alt_tab,
+            ZMK_MACRO(shft_tab,
               wait-ms = <30>;
               tap-ms = <40>;
-              bindings =  <&macro_press &kp LALT>,
-                          <&macro_tap &kp TAB>,
-                          <&macro_release &kp LALT>;
-            )
-            ZMK_MACRO(alt_shft_tab,
-              wait-ms = <30>;
-              tap-ms = <40>;
-              bindings =  <&macro_press &kp LALT &kp LSHFT>,
-                    <&macro_tap &kp TAB>, 
-                    <&macro_release &kp LALT &kp LSHFT>;
-            )
-            ZMK_MACRO(ctrl_tab,
-              wait-ms = <30>;
-              tap-ms = <40>;
-              bindings =  <&macro_press &kp LCTRL>,
+              bindings =  <&macro_press &kp LSHFT>,
                 <&macro_tap &kp TAB>
-                , <&macro_release &kp LCTRL >;
-            )
-            ZMK_MACRO(ctrl_shft_tab,
-              wait-ms = <30>;
-              tap-ms = <40>;
-              bindings =  <&macro_press &kp LCTRL &kp LSHFT>,
-                    <&macro_tap &kp TAB>, 
-                    <&macro_release &kp LCTRL &kp LSHFT>;
+                , <&macro_release &kp LSHFT >;
             )
         };
     conditional_layers {
