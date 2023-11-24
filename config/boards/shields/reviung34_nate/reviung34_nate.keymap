@@ -30,17 +30,12 @@
         combo_tab {
             timeout-ms = <50>;
             key-positions = <16 17>;
-            bindings = <&kp RS(TAB)>;
+            bindings = <&kp TAB>;
         };
         combo_shft_tab {
             timeout-ms = <50>;
             key-positions = <15 16>;
-            bindings = <&kp LS(TAB)>;
-        };
-        combo_combo {
-            timeout-ms = <50>;
-            key-positions = <13 14>;
-            bindings = <&shft_tab>;
+            bindings = <&kp RS(TAB)>;
         };
     };
     behaviors {
@@ -54,15 +49,6 @@
             bindings = <&kp>, <&kp>;
         };
     };
-    macros {
-            ZMK_MACRO(shft_tab,
-              wait-ms = <30>;
-              tap-ms = <40>;
-              bindings =  <&macro_press &kp LSHFT>,
-                <&macro_tap &kp TAB>
-                , <&macro_release &kp LSHFT >;
-            )
-        };
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -134,7 +120,7 @@ bindings = <
 
 
 config_layer {
-// -----------------------------------------------------------------------------------------
+// ----------------------------------------------------
 // | | | | | |     | BT1    | BT2   | BT3 | BT4 | BT5 |
 // | | | | | |     | BT CLR |       |     |     |     |
 // | | | | | |     | Reset  | btldr |     |     |     |
