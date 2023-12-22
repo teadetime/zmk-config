@@ -17,8 +17,6 @@
 #define BRACK 2
 #define NUM 3
 #define CONFIG 4
-#define NAV1 5
-#define NAV2 6
 
 &mt {
     tapping-term-ms = <165>;
@@ -69,7 +67,7 @@ default_layer {
 
     bindings = <
    &kp Q        &kp W      &kp E        &kp R          &kp T                 &kp Y  &kp U       &kp I      &kp O    &kp P
-   &hm LCTRL A  &lt NUM S  &lt BRACK D  &kp F          &kp G                 &kp H  &kp J       &kp K      &kp L    &hm RALT N
+   &hm LCTRL A  &lt NUM S  &lt BRACK D  &kp F          &kp G                 &kp H  &kp J       &kp K      &kp L    &hm RALT SEMI
    &mt LSHFT Z  &kp X      &kp C        &kp V          &kp B                 &kp N  &kp M       &kp COMMA  &kp DOT  &mt LSHFT DQT
                                         &mt LCTRL DEL  &lt BRACK BSPC       &lt SYMNAV SPACE  &mt LALT RET
                         >;
