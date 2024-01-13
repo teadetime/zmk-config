@@ -20,7 +20,7 @@ include:
   # - board: nice_nano_v2
   #   shield: reviung34_nate
   - board: nice_nano_v2
-    shield: osprette
+    shield: osprette_nate
 
   # - board: nice_nano_v2
   #   shield: settings_reset
